@@ -1,0 +1,38 @@
+[
+  {
+    "id": 1,
+    "name": "Wireless Headphones",
+    "category": "Electronics",
+    "price": 1299.0,
+    "stock": 18,
+    "description": "Comfortable wireless headphones for everyday listening, with a clean modern design.",
+    "image": "https://images.unsplash.com/photo-1505740420928-5e560c06d30e"
+  },
+  {
+    "id": 2,
+    "name": "Minimal Desk Lamp",
+    "category": "Home",
+    "price": 749.0,
+    "stock": 12,
+    "description": "A minimal desk lamp designed for focused work and warm ambient lighting.",
+    "image": "https://images.unsplash.com/photo-1507473885765-e6ed057f782c"
+  },
+  {
+    "id": 3,
+    "name": "Everyday Backpack",
+    "category": "Accessories",
+    "price": 899.0,
+    "stock": 25,
+    "description": "A versatile backpack with practical storage for work, study, and travel.",
+    "image": "https://images.unsplash.com/photo-1553062407-98eeb64c6a62"
+  },
+  {
+    "id": 4,
+    "name": "Ceramic Coffee Mug",
+    "category": "Home",
+    "price": 199.0,
+    "stock": 40,
+    "description": "A simple ceramic mug for your daily coffee or tea ritual.",
+    "image": "https://images.unsplash.com/photo-1514228742587-6b1558f?auto=format&fit=crop&w=900&q=80"
+  }
+]

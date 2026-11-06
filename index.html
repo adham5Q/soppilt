@@ -1,0 +1,12 @@
+{% extends "base.html" %}{% block title %}ShopPilot | Smart Shopping{% endblock %}
+{% block content %}
+<section class="hero">
+ <div class="hero-copy"><span class="eyebrow">THE SMARTER WAY TO SHOP</span><h1>Find your next<br><em>everyday essential.</em></h1><p>Discover useful products, thoughtful design, and a smoother way to shop.</p><a class="btn btn-light" href="{{ url_for('products') }}">Explore products <span>→</span></a></div>
+ <div class="hero-art"><div class="art-orbit"></div><div class="art-card"><span>SHOPPILOT SELECT</span><div class="art-shape">✦</div><strong>Curated for<br>your lifestyle.</strong><small>Simple. Useful. Better.</small></div><div class="floating-tag">NEW COLLECTION <b>↗</b></div></div>
+</section>
+<div class="section-heading"><div><span class="eyebrow">HANDPICKED FOR YOU</span><h2>Featured products</h2></div><a class="text-link" href="{{ url_for('products') }}">View all products →</a></div>
+<section class="product-grid">
+{% for p in products %}<article class="product-card"><a class="product-image" href="{{ url_for('product_detail', product_id=p.id) }}"><img src="{{ p.image }}" alt="{{ p.name }}" onerror="this.src='https://placehold.co/600x420?text=ShopPilot'"><span class="image-badge">{{ p.category }}</span></a><div class="product-info"><div><h3>{{ p.name }}</h3><p>{{ p.description }}</p></div><div class="product-bottom"><strong>EGP {{ "%.2f"|format(p.price) }}</strong><form method="post" action="{{ url_for('add_to_cart', product_id=p.id) }}"><button class="icon-btn" aria-label="Add to cart">+</button></form></div></div></article>{% else %}<p>No products yet. Add products from Admin.</p>{% endfor %}
+</section>
+<section class="feature-strip"><div><span>01</span><b>Curated selection</b><small>Useful finds for daily life</small></div><div><span>02</span><b>Easy shopping</b><small>A simple, clear experience</small></div><div><span>03</span><b>Smart inventory</b><small>Stock-aware product listings</small></div></section>
+{% endblock %}
